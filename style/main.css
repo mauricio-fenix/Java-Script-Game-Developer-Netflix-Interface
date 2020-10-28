@@ -94,3 +94,54 @@ header nav a:hover{
     width: 100%;
     display: block;
 }
+
+.owl-carousel {
+    margin-top: 7px;
+}
+
+/* POPUP */
+
+.popup {
+    visibility: hidden;
+    display: flex;
+    border: #555 1px solid;
+    width: 270px;
+    justify-content: center;
+    background: rgba(0,0,0,.75);
+    position: absolute;
+    
+    z-index: 2;
+    bottom: 238px;
+    left: 31%;
+    border-radius: 10px;
+    
+}
+
+.popup::after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 4%;
+    margin-left: -5px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: rgba(0,0,0,.75) transparent transparent transparent;
+}
+
+.popupText{
+    
+    text-align: center;
+    color: #AAA;
+    padding: 15px 0;
+    
+}
+
+.popup.show {
+    visibility: visible;
+    animation: fadeIn 1s
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }
